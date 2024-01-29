@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сайт Т Л им. М. В. Ломоносова</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="img/school__icon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/school__icon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f5fafe;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #0a223d;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+  <style>
+    /* The actual timeline (the vertical ruler) */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      background-color: rgb(255, 255, 255);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      z-index: -1;
+    }
+
+    /* Container around content */
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    /* The circles on the timeline */
+    .timeline-container::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #727299;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    /* Place the container to the left */
+    .left {
+      left: 0;
+    }
+
+    /* Place the container to the right */
+    .right {
+      left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+    .right::after {
+      left: -16px;
+    }
+
+    /* The actual content */
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+
+      /* Place the timelime to the left */
+      .timeline::after {
+        left: 31px;
+      }
+
+      /* Full-width containers */
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after,
+      .right::after {
+        left: 15px;
+      }
+
+      /* Make all right containers behave like the left ones */
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+  <!-- История -->
+</head>
+
+<body>
+  <div class="progress">
+    <div class="progress-container">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+  </div>
+  <!-- /.progress -->
+  <header class="header">
+    <div class="header-contacts">
+      <div class="container">
+        <div class="header-contacts-wrapper">
+          <div class="header-contacts-number">
+            <img src="img/phone__image.svg" alt="icon: телефон" class="header-contacts__image" />
+            <a href="callto:026923909" class="header-contacts__text">0 (269) 23909</a>
+          </div>
+          <div class="header-contacts-mail">
+            <img src="img/mail__image.svg" alt="icon: почта " class="header-contacts__image" />
+            <a href="mailto:lomonosov@rambler.ru" class="header-contacts__text">lomonosov2@rambler.ru</a>
+          </div>
+          <div class="header-contacts-geo">
+            <img src="img/geo__icon.svg" alt="icon: местоположение" class="header-contacts__image" />
+            <span class="header-contacts__text">Strada Mihalcea Hîncu 126</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.header-contacts -->
+    <div class="container">
+      <div class="nav-menu--top">
+        <a href="index.html" class="logo__link">
+          <img src="img/logo__school.png" alt="logo: Школа" class="logo__image animate__animated animate__fadeInLeft" />
+        </a>
+        <form action="#" class="search navbar__search">
+          <input type="text" class="search__input" placeholder="Поиск..." />
+          <button class="search__button">
+            <img src="img/search.svg" alt="button: search" style="width: 16px" />
+          </button>
+        </form>
+        <div class="language">
+          <span class="language__item"><a href="#" class="language--ru language__link">ru</a></span>
+          <span class="language__item"><a href="#" class="language--ro language__link">ro</a></span>
+          <span class="language__item"><a href="#" class="language--en language__link">en</a></span>
+        </div>
+        <!-- /.language -->
+        <a href="#" class="user" id="user-ru">
+          <img src="img/profile.png" alt="icon: profile" class="user__image" />
+          <span class="user__name">Войти</span>
+        </a>
+        <!-- /.user -->
+        <div class="sidenav-wrapper">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#" class="sidenav__link">О Лицее</a>
+            <a href="Pupils.html" class="sidenav__link">Ученикам</a>
+            <a href="Parents.html" class="sidenav__link">Родителям</a>
+            <!-- <a href="blog.html" class="sidenav__link">Блог</a> -->
+            <a href="contacts.html" class="sidenav__link">Контакты</a>
+          </div>
+        </div>
+        <!-- /.sidenav-wrapper -->
+        <span class="menu__button animate__animated animate__fadeInRight" style="font-size: 30px; cursor: pointer"
+          onclick="openNav()">&#9776;</span>
+      </div>
+      <!-- /.nav-menu--top -->
+    </div>
+    <!-- /.container -->
+    <div class="nav-menu--bottom">
+      <div class="container">
+        <ul class="nav-menu__list">
+          <li class="nav-menu__item">
+            <div class="dropdown">
+              <a href="#" class="nav-menu__link">О Лицее</a>
+              <div class="dropdown-content">
+                <a href="#Photoexample">Фотогалерея</a>
+                <a href="#Breakingnews">Крайние Новости</a>
+                <a href="#Benefits">Цели</a>
+                <a href="#Sections">Секции</a>
+                <a href="#Laureates">Лауреаты</a>
+                <a href="#History">История Лицея</a>
+              </div>
+            </div>
+            <!-- <a href="#" class="nav-menu__link">О Школе</a> -->
+          </li>
+          <li class="nav-menu__item">
+            <a href="Pupils.html" class="nav-menu__link">Ученикам</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="Parents.html" class="nav-menu__link">Родителям</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="blog.html" class="nav-menu__link">Блог</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="contacts.html" class="nav-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.nav-menu--bottom -->
+  </header>
+  <section class="Lomonosov">
+    <div class="container">
+      <div class="Lomonosov-main">
+        <div class="Lomonosov-img">
+          <img src="img/Михаил Васильевич Ломоносов.png" alt="" class="Lomonosov__image" />
+        </div>
+        <!-- /.Lomonosov-img -->
+        <div class="Lomonosov-info">
+          <span class="Lomonosov__text">
+            <br />
+            Под небом голубым родимой стороны, <br>
+            Наш гордый строгий гимн поём сегодня мы. <br>
+            Мы славим на века родимый наш лицей; <br>
+            Пусть он живёт, пока есть люди на земле. <br>
+            Живи и процветай родной лицей, <br>
+            Добро неси и свет; <br>
+            Дружною лицейскою семьёю, <br>
+            Проживи ещё сто лет. <br>
+            Историей своей гордится наш лицей; <br>
+            Выпускники, наставники прославили его. <br>
+            Не забывай, лицей, своих учителей; <br>
+            Тяжёлым их трудом заложен твой успех. <br>
+            Живи и процветай родной лицей, <br>
+            Добро неси и свет; <br>
+            Дружною лицейскою семьёю, <br>
+            Проживи ещё сто лет. <br>
+          </span>
+          <p class="Lomonosov__subtext">
+            Гимн Теоретического Лицея им. М. В. Ломоносова
+          </p>
+        </div>
+        <!-- /.Lomonosov-info -->
+      </div>
+      <!-- /.Lomonosov-main -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.Lomonosov -->
+  <section class="photoexample" id="Photoexample">
+    <div class="container">
+      <div class="view view-first">
+        <img src="img/school.jpg" alt="" class="photoexample__image" />
+        <div class="mask">
+          <h2 class="photoexample__name">Фотогалерея</h2>
+          <p class="photoexample__text">
+            По кнопке ниже Вы можете перейти в фотогалерею лицея
+          </p>
+          <a href="Photogallery.html" class="photoexample__link">Подробнее...</a>
+        </div>
+        <!-- /.mask -->
+        <div class="backgroundRight"></div>
+        <!-- /.backgroundRight -->
+      </div>
+      <!-- /.view viewfirst -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.photoexample -->
+  <section class="breakingnews" id="Breakingnews">
+    <div class="container">
+      <h1 class="breakingnews__name">Крайние Новости</h1>
+      <div class="breakingnews-wrapper">
+        <div class="breakingnews-card">
+          <div class="breakingnews-img">
+            <img src="img/День Родного Языка.jpg" alt="img: День Родного Языка" class="breakingnews__image" />
+          </div>
+          <!-- ./breakingnews-img -->
+          <div class="breakingnews-info">
+            <a href="blog.html#anchor" class="breakingnews__link">
+              <h2 class="breakingnews__title">День Родного Языка</h2>
+            </a>
+            <span class="breakingnews__date">Фев 21, 2022</span>
+          </div>
+          <!-- /.breakingnews-info -->
+        </div>
+        <!-- /.breakingnews-card -->
+        <div class="breakingnews-card">
+          <div class="breakingnews-img">
+            <img src="img/Учитель Года.jpg" alt="img: Учитель Года" class="breakingnews__image" />
+          </div>
+          <!-- ./breakingnews-img -->
+          <div class="breakingnews-info">
+            <a href="blog.html#anchor" class="breakingnews__link">
+              <h2 class="breakingnews__title">Учитель Года 2022</h2>
+            </a>
+            <span class="breakingnews__date">Мар 2, 2022</span>
+          </div>
+          <!-- /.breakingnews-info -->
+        </div>
+        <!-- /.breakingnews-card -->
+        <div class="breakingnews-card">
+          <div class="breakingnews-img">
+            <img src="img/Встреча с Лидией Гросу.jpg" alt="img: Встреча с Лидией Гросу" class="breakingnews__image" />
+          </div>
+          <!-- ./breakingnews-img -->
+          <div class="breakingnews-info">
+            <a href="blog.html#anchor" class="breakingnews__link">
+              <h2 class="breakingnews__title">
+                Встреча с Поэтессой Лидией Гросу
+              </h2>
+            </a>
+            <span class="breakingnews__date">Мар 18, 2022</span>
+          </div>
+          <!-- /.breakingnews-info -->
+        </div>
+        <!-- /.breakingnews-card -->
+        <div class="breakingnews-card">
+          <div class="breakingnews-img">
+            <img src="img/Лауряты Олимпиад.jpg" alt="img: Лауряты Олимпиа" class="breakingnews__image" />
+          </div>
+          <!-- ./breakingnews-img -->
+          <div class="breakingnews-info">
+            <a href="blog.html#anchor" class="breakingnews__link">
+              <h2 class="breakingnews__title">Gala Laureaților</h2>
+            </a>
+            <span class="breakingnews__date">Май 27, 2022</span>
+          </div>
+          <!-- /.breakingnews-info -->
+        </div>
+        <!-- /.breakingnews-card -->
+      </div>
+      <!-- /.breakingnews-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.breakingnews -->
+  <section class="benefits" id="Benefits" id="butter">
+    <div class="container">
+      <div class="benefit-wrapper animate__animated animate__fadeInUp">
+        <div class="benefit benefit--1">
+          <img src="img/diamond__icon.svg" alt="" class="benefit__image" />
+          <h3 class="benefit__name">Профессионализм</h3>
+          <span class="benefit__text">Профессионализм и мастерство преподавателей залог высокого уровня
+            педагогической деятельности</span>
+        </div>
+        <div class="benefit benefit--2">
+          <img src="img/goal__icon.svg" alt="" class="benefit__image" />
+          <h3 class="benefit__name">Цели</h3>
+          <span class="benefit__text">Возможность развивать и воспитывать творческую личность, готовую
+            к адаптации в социуме</span>
+        </div>
+        <div class="benefit benefit--3">
+          <img src="img/opportunity__icon.svg" alt="" class="benefit__image" />
+          <h3 class="benefit__name">Перспективы</h3>
+          <span class="benefit__text">
+            Создать современные, безопасные и комфортные условия для
+            подготовки конкурентноспособного ученика</span>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.benefits -->
+  <hr class="animate__animated animate__fadeInLeftBig" />
+  <section class="sections" id="Sections">
+    <div class="container">
+      <div class="sections-wrapper">
+        <div class="sections-section">
+          <div class="sections-img">
+            <img src="img/PupilatBoard.jpg" alt="" class="sections__image" />
+            <div class="sections-info">
+              <h3 class="sections__name">Для Родителей</h3>
+              <a href="Parents.html" class="sections__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.sections-section -->
+        <div class="sections-section">
+          <div class="sections-img">
+            <img src="img/PupilsinLibrary.jpg" alt="" class="sections__image" />
+            <div class="sections-info sections-info--yellow">
+              <h3 class="sections__name">Для Учеников</h3>
+              <a href="Pupils.html" class="sections__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.sections-section -->
+        <!-- <div class="sections-section">
+            <div class="sections-img">
+              <img src="img/PupilatBoard.jpg" alt="" class="sections__image" />
+              <div class="sections-info sections-info--green">
+                <h3 class="sections__name">Сенат Лицея</h3>
+                <a href="#" class="sections__link">Подробнее</a>
+              </div>
+            </div>
+          </div> -->
+        <!-- /.sections-section -->
+        <div class="sections-section sections-section--blue">
+          <div class="sections-img">
+            <img src="img/Программа Развития.jpg" alt="" class="sections__image sections__image--blue" />
+            <div class="sections-info sections-info--blue">
+              <h3 class="sections__name">Программа развития лицея</h3>
+              <a href="develop.html" class="sections__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.sections-section -->
+        <div class="sections-section sections-section--red">
+          <div class="sections-img">
+            <img src="img/Бюджет.jpg" alt="" class="sections__image sections__image--red" />
+            <div class="sections-info sections-info--red">
+              <h3 class="sections__name">Бюджет Лицея</h3>
+              <a href="#" class="sections__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.sections-section -->
+      </div>
+      <!-- /.sections-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.sections -->
+  <section class="Laureates" id="#Laureates">
+    <div class="container">
+      <h1 class="Laureates__title">Лауреаты Различных Премий</h1>
+      <div class="Laureates-wrapper">
+        <a href="/Laureates/Liliya-Nikolaevna.html" class="Laureates__link">
+          <div class="Laureates-card">
+            <div class="Laureates-img">
+              <img src="img/Лауряты/Лилия Николаевна.jpg" alt="Фото: Лилия Николаевна" class="Laureates__image" />
+            </div>
+            a.Laureates
+            <!-- /.Laureates-img -->
+            <div class="Laureates-info">
+              <h2 class="Laureates__name">Гургуров, Лилия Николаевна</h2>
+              <span class="Laureates__Describe">(Animator de excelență)</span>
+            </div>
+            <!-- /.Laureates-info -->
+          </div>
+        </a>
+        <a href="/Laureates/Ivan-Georgievich.html" class="Laureates__link">
+          <div class="Laureates-card">
+            <div class="Laureates-img">
+              <img src="img/Лауряты/Иван Георгиевич.jpg" alt="Фото: Иван Георгиевич " class="Laureates__image" />
+            </div>
+            <!-- /.Laureates-img -->
+            <div class="Laureates-info">
+              <h2 class="Laureates__name">Ариков, Иван Георгиевич</h2>
+              <span class="Laureates__Describe">3 место в номинации "Учитель Года"</span>
+            </div>
+            <!-- /.Laureates-info -->
+          </div>
+        </a>
+      </div>
+      <!-- /.Laureates-wrapper -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.Laureates -->
+  <section class="history" id="History" id="butter">
+    <div class="container">
+      <h1 class="history__name animate__animated animate__fadeInUpBig">
+        История лицея
+      </h1>
+      <div class="timeline">
+        <div class="timeline-container left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-content">
+            <h2>1944</h2>
+            <p class="timeline__text">
+              История учебного заведения началась в 1944 г., с открытия
+              Котовской семилетней школы №2, которая просуществовала в данном
+              статусе до 1948 г.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-content">
+            <h2>1948</h2>
+            <p class="timeline__text">
+              В 1948 году школа была реорганизована в Среднюю русскую школу №2
+              г. Котовска, в последствии г. Хынчешты и просуществовала в таком
+              статусе до 2003 г.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-container left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-content">
+            <h2>1998</h2>
+            <p class="timeline__text">
+              Первые лицейские классы гуманитарного и реального профиля были
+              набраны именно в этом году.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left" data-aos-duration="1000">
+          <div class="timeline-content">
+            <h2>2003</h2>
+            <p class="timeline__text">
+              Теоретическому лицею им. М. Ломоносова был присвоен статус лицея
+              в 2003 году (Пр. Министерства образования №414 от 13 августа
+              2003г – Теоретический лицей №2 Хынчешть, Решение городского
+              совета №6 от 13 августа 2003 г. – присвоение имени М.Ломоносова)
+              на базе средней русской школы №2 г. Хынчешть.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-container left" data-aos="fade-right" data-aos-duration="1000">
+          <div class="timeline-content">
+            <h2>2012 - Н.В</h2>
+            <p class="timeline__text">
+              В соответсвии с Решением нр. 405 с 12.12.2012 Министерства
+              Юстиции Республики Молдова лицей был преобразован в Публичное
+              учреждение Теоретический лицей «М. Ломоносова» Хынчешть. В
+              настоящее время учреждение как теоретический лицей с тремя
+              ступенями обучения- начальное, гимназическое, лицейское.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.history -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#" class="footer__link">О Лицее</a>
+        <a href="blog.html" class="footer__link">Новости</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
+      </div>
+      <!-- /.footer-links -->
+      <p class="footer__text">© Copyright 2022. All Rights Reserved.</p>
+      <a href="https://basti-web.ru/index-ru.html" class="footer__bastiweb">Разработано BASTIWEB CO.</a>
+      <!-- /.footer__bastiweb -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- ./footer -->
+  <a href="#backTop" class="backTop-btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><br />Вверх</a>
+  <!-- Кнопка Прокрутки -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ru.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Show and hide button after scroll down and up
+      $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 200) {
+          $(".backTop-btn").fadeIn("slow");
+        } else {
+          $(".backTop-btn").fadeOut("slow");
+        }
+      });
+      // Clickable button js
+      $("a[href='#backTop']").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 500);
+      });
+    });
+  </script>
+  <style type="text/css">
+    #hellopreloader>p {
+      display: none;
+    }
+
+    #hellopreloader_preload {
+      display: block;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-width: 1000px;
+      background: #85b6d6 url(http://hello-site.ru//main/images/preloads/three-dots.svg) center center no-repeat;
+      background-size: 95px;
+    }
+  </style>
+  <div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+    <p>
+      <a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a>
+    </p>
+  </div>
+  <script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+
+    function fadeOutnojquery(el) {
+      el.style.opacity = 1;
+      var interhellopreloader = setInterval(function () {
+        el.style.opacity = el.style.opacity - 0.05;
+        if (el.style.opacity <= 0.05) {
+          clearInterval(interhellopreloader);
+          hellopreloader.style.display = "none";
+        }
+      }, 16);
+    }
+    window.onload = function () {
+      setTimeout(function () {
+        fadeOutnojquery(hellopreloader);
+      }, 1500);
+    };
+  </script>
+</body>
+
+</html>

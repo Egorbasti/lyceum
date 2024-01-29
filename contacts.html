@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сайт Т Л им. М. В Ломоносова</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="img/school__icon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/school__icon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #f5fafe;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #0a223d;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="progress">
+    <div class="progress-container">
+      <div class="progress__bar" id="progressBar"></div>
+    </div>
+  </div>
+  <!-- /.progress -->
+  <header class="header">
+    <div class="header-contacts">
+      <div class="container">
+        <div class="header-contacts-wrapper">
+          <div class="header-contacts-number">
+            <img src="img/phone__image.svg" alt="icon: телефон" class="header-contacts__image" />
+            <a href="callto:026923909" class="header-contacts__text">0 (269) 23909</a>
+          </div>
+          <div class="header-contacts-mail">
+            <img src="img/mail__image.svg" alt="icon: почта " class="header-contacts__image" />
+            <a href="mailto:lomonosov@rambler.ru" class="header-contacts__text">lomonosov2@rambler.ru</a>
+          </div>
+          <div class="header-contacts-geo">
+            <img src="img/geo__icon.svg" alt="icon: местоположение" class="header-contacts__image" />
+            <span class="header-contacts__text">Strada Mihalcea Hîncu 126</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.header-contacts -->
+    <div class="container">
+      <div class="nav-menu--top">
+        <a href="index.html" class="logo__link">
+          <img src="img/logo__school.png" alt="logo: Школа" class="logo__image animate__animated animate__fadeInLeft" />
+        </a>
+        <form action="#" class="search navbar__search">
+          <input type="text" class="search__input" placeholder="Поиск..." />
+          <button class="search__button">
+            <img src="img/search.svg" alt="button: search" style="width: 16px" />
+          </button>
+        </form>
+        <div class="language">
+          <span class="language__item"><a href="#" class="language--ru language__link">ru</a></span>
+          <span class="language__item"><a href="#" class="language--ro language__link">ro</a></span>
+          <span class="language__item"><a href="#" class="language--en language__link">en</a></span>
+        </div>
+        <!-- /.language -->
+        <a href="#" class="user" id="user-ru">
+          <img src="img/profile.png" alt="icon: profile" class="user__image" />
+          <span class="user__name">Войти</span>
+        </a>
+        <!-- /.user -->
+        <div class="sidenav-wrapper">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html" class="sidenav__link">О Лицее</a>
+            <a href="Pupils.html" class="sidenav__link">Ученикам</a>
+            <a href="Parents.html" class="sidenav__link">Родителям</a>
+            <a href="blog.html" class="sidenav__link">Блог</a>
+            <a href="contacts.html" class="sidenav__link">Контакты</a>
+          </div>
+        </div>
+        <!-- /.sidenav-wrapper -->
+        <span class="menu__button animate__animated animate__fadeInRight" style="font-size: 30px; cursor: pointer"
+          onclick="openNav()">&#9776;</span>
+      </div>
+      <!-- /.nav-menu--top -->
+    </div>
+    <!-- /.container -->
+    <div class="nav-menu--bottom">
+      <div class="container">
+        <ul class="nav-menu__list">
+          <li class="nav-menu__item">
+            <a href="index.html" class="nav-menu__link">О Лицее</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="Pupils.html" class="nav-menu__link">Ученикам</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="Parents.html" class="nav-menu__link">Родителям</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="blog.html" class="nav-menu__link">Блог</a>
+          </li>
+          <li class="nav-menu__item">
+            <a href="contacts.html" class="nav-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.nav-menu--bottom -->
+  </header>
+  <section class="contacts-main">
+    <div class="contacts-main-wrapper">
+      <h1 class="contacts-main__name">Контакты</h1>
+    </div>
+    <!-- /.contacts-wrapper -->
+    <div class="container">
+      <div class="map">
+        <iframe allow="geolocation" width="100%" height="550" frameborder="0"
+          src="https://map.md/ru/places/113962/305877?viewType=mapStyle&embed=1#13.9/46.825391999999994/28.594562999999965/0/0">
+        </iframe>
+      </div>
+      <!-- /.map -->
+      <div class="contacts-main-help">
+        <div class="contacts-main-information">
+          <h3 class="contacts-main-information__name">
+            Контактная информация
+          </h3>
+          <div class="contacts-main-information-social">
+            <img src="img/geo__icon.svg" alt="" class="contacts-main-information__icon" />
+            <div class="contacts-main-information-group">
+              <p class="contacts-main-information-social__name">Адрес</p>
+              <span class="contacts-main-information-social__text">Strada Mihalcea Hîncu 126</span>
+            </div>
+          </div>
+          <!-- /.contacts-main-information-social -->
+          <div class="contacts-main-information-social">
+            <img src="img/Clock__icon.svg" alt="" class="contacts-main-information__icon" />
+            <div class="contacts-main-information-group">
+              <p class="contacts-main-information-social__name">
+                График работы
+              </p>
+              <span class="contacts-main-information-social__text">Понедельник - Пятница (8:00 - 17:00)</span>
+            </div>
+            <!-- /.contacts-main-information-group -->
+          </div>
+          <!-- /.contacts-main-information-social -->
+          <div class="contacts-main-information-social">
+            <img src="img/phone__image.svg" alt="" class="contacts-main-information__icon" />
+            <div class="contacts-main-information-group">
+              <p class="contacts-main-information-social__name">Телефон</p>
+              <span class="contacts-main-information-social__text">0 (269) 23909</span>
+            </div>
+            <!-- /.contacts-main-information-group -->
+          </div>
+          <!-- /.contacts-main-information-social -->
+          <div class="contacts-main-information-social">
+            <img src="img/mail__image.svg" alt="" class="contacts-main-information__icon" />
+            <div class="contacts-main-information-group">
+              <p class="contacts-main-information-social__name">
+                Электронная Почта
+              </p>
+              <span class="contacts-main-information-social__text">lomonosov2@rambler.ru</span>
+            </div>
+            <!-- /.contacts-main-information-group -->
+          </div>
+          <!-- /.contacts-main-information-social -->
+          <div class="contacts-main-information-social">
+            <img src="img/Share__icon.svg" alt="" class="contacts-main-information__icon" />
+            <div class="contacts-main-information-group--media">
+              <p class="contacts-main-information-social__name"></p>
+              Социальные Сети
+              </p>
+              <a href="https://www.facebook.com/profile.php?id=100051482033028" class="contacts-main-information__link">
+                <img src="img/Facebook__icon.svg" alt="" class="contacts-main-information-social__icon" />
+              </a>
+              <!-- /.contacts-main-information__link -->
+              <a href="https://ok.ru/mlomonosov" class="contacts-main-information__link">
+                <img src="img/Odnoklassniki__icon.svg" alt="#" class="contacts-main-information-social__icon" />
+              </a>
+              <!-- /.contacts-main-information__link -->
+            </div>
+            <!-- /.contacts-main-information-group -->
+          </div>
+          <!-- /.contacts-main-information-social -->
+        </div>
+        <!-- /.contacts-main-information -->
+        <div class="contacts-main-questions">
+          <h3 class="contacts-main-questions__name">
+            Рады ответить на все вопросы!
+          </h3>
+          <span class="contacts-main-questions__text">
+            Появились вопросы - свяжитесь с нами посредсвтом доступных
+            контактов
+          </span>
+        </div>
+        <!-- /.contacts-main-questions -->
+      </div>
+      <!-- /.contacts-main-help -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.contacts-main -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html" class="footer__link">О Лицее</a>
+        <a href="blog.html" class="footer__link">Новости</a>
+        <a href="#" class="footer__link">Контакты</a>
+      </div>
+      <!-- /.footer-links -->
+      <p class="footer__text">© Copyright 2022. Все права защищены.</p>
+      <a href="https://basti-web.ru/index-ru.html" class="footer__bastiweb">Разработано BASTIWEB CO.</a>
+      <!-- /.footer__bastiweb -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- ./footer -->
+  <a href="#backTop" class="backTop-btn"><i class="fa fa-arrow-up" aria-hidden="true"></i><br />Вверх</a>
+  <!-- Кнопка Прокрутки -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ru.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Show and hide button after scroll down and up
+      $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 200) {
+          $(".backTop-btn").fadeIn("slow");
+        } else {
+          $(".backTop-btn").fadeOut("slow");
+        }
+      });
+      // Clickable button js
+      $("a[href='#backTop']").click(function () {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 500);
+      });
+    });
+  </script>
+  <style type="text/css">
+    #hellopreloader>p {
+      display: none;
+    }
+
+    #hellopreloader_preload {
+      display: block;
+      position: fixed;
+      z-index: 99999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-width: 1000px;
+      background: #85b6d6 url(http://hello-site.ru//main/images/preloads/three-dots.svg) center center no-repeat;
+      background-size: 95px;
+    }
+  </style>
+  <div id="hellopreloader">
+    <div id="hellopreloader_preload"></div>
+    <p>
+      <a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a>
+    </p>
+  </div>
+  <script type="text/javascript">
+    var hellopreloader = document.getElementById("hellopreloader_preload");
+
+    function fadeOutnojquery(el) {
+      el.style.opacity = 1;
+      var interhellopreloader = setInterval(function () {
+        el.style.opacity = el.style.opacity - 0.05;
+        if (el.style.opacity <= 0.05) {
+          clearInterval(interhellopreloader);
+          hellopreloader.style.display = "none";
+        }
+      }, 16);
+    }
+    window.onload = function () {
+      setTimeout(function () {
+        fadeOutnojquery(hellopreloader);
+      }, 0);
+    };
+  </script>
+</body>
+
+</html>
